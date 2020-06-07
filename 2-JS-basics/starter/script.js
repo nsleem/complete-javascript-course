@@ -1,3 +1,6 @@
+/*************************
+* Variables and Data Types
+**************************/
 var firstName = 'Nader';
 console.log(firstName);
 
@@ -12,3 +15,7 @@ console.log(job)
 
 job = 'Teacher'
 console.log(job)
+
+/**************************************
+ * Variable mutation and type coercion
+ *************************************/
