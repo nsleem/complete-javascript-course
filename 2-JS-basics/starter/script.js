@@ -76,33 +76,181 @@
  * Operator Precedence
  *************************************/
 
-var now = 2020;
-var yearNader = 1994;
-var fullAge = 18;
+// var now = 2020;
+// var yearNader = 1994;
+// var fullAge = 18;
 
-// Multiple Operators
-var isFullAge = now - yearJohn >= fullAge;
+// // Multiple Operators
+// var isFullAge = now - yearJohn >= fullAge;
 
-// Grouping
-var ageFoo = now - yearJohn;
-var ageBar = 35;
-// Note the neccessity of the (...), since the division operator has higher precedence, but we want the
-// addition to execute first. So we can force the '+' to parse first
-var average = (ageFoo + ageBar) / 2;
+// // Grouping
+// var ageFoo = now - yearJohn;
+// var ageBar = 35;
+// // Note the neccessity of the (...), since the division operator has higher precedence, but we want the
+// // addition to execute first. So we can force the '+' to parse first
+// var average = (ageFoo + ageBar) / 2;
 
-// Multiple Assignments
-var x, y;
-// x ends up NOT being 'undefined' because the `=` operator executes from right-to-left
-x = y = (3 + 5) * 4 - 6;
+// // Multiple Assignments
+// var x, y;
+// // x ends up NOT being 'undefined' because the `=` operator executes from right-to-left
+// x = y = (3 + 5) * 4 - 6;
 
-// More operators
-x *= 2;
-x += 10;
-x -= 22;
-x /= 1;
+// // More operators
+// x *= 2;
+// x += 10;
+// x -= 22;
+// x /= 1;
 
-// Pre and Postfix Increment and Decrements
-++x;
---x;
-x++;
-x--;
+// // Pre and Postfix Increment and Decrements
+// ++x;
+// --x;
+// x++;
+// x--;
+
+/**************************************
+ * If/Else Statements
+ *************************************/
+
+// var firstName = "Nader";
+// var civilStatus = "single";
+
+// if (civilStatus === "married") {
+//   console.log(firstName + " is married");
+// } else {
+//   console.log(firstName + " is not married");
+// }
+
+// var isMarried = true;
+// if (isMarried) {
+//   console.log(firstName + " is married");
+// } else {
+//   console.log(firstName + " is not married");
+
+// }
+
+/**************************************
+ * Boolean Logic
+ *************************************/
+
+//  var age = 21;
+
+//  if (age < 13) {
+//   console.log(firstName + ' is a boy');
+//  } else if (age >= 13 && age < 20) {
+//   console.log(firstName + ' is a teenager');
+//  } else if (age >= 20 && age < 30) {
+//   console.log(firstName + ' is a young adult');
+//  } else {
+//    console.log(firstName + ' is an adult');
+//  }
+
+/**************************************
+ * Ternary Operator and Switch Statements
+**************************************/
+
+// var firstName = 'Nader';
+// var age = 25;
+
+// age >= 18 ? console.log(firstName + ' drinks beer') : console.log(firstName + ' drinks juice');
+
+// var drink = age > 25 ? 'beer' : 'juice';
+
+// var job = 'teacher';
+
+// switch (job) {
+//   case 'teacher':
+//   case 'instructor':
+//     console.log('this is a teacher!');
+//     break;
+//   case 'driver':
+//     console.log('this is a driver');
+//     break;
+//   case 'designer':
+//     console.log('this is a designer');
+//     break;
+//   default:
+//     console.log('default case');
+//     break;
+// }
+
+// switch (true) {
+//     case age < 13:
+//         console.log('kid');
+//         break;
+//     case age >= 13 && age < 20:
+//         console.log('teenager');
+//         break;
+//     case age >= 20 && age < 30:
+//         console.log('young man');
+//     default:
+//         console.log('adult');
+// }
+
+/**************************************
+ * Truthy and Falsy Values and Equality Operators
+**************************************/
+
+// var height;
+
+// if (height) {
+// 	console.log('Variable is defined');
+// } else {
+//     console.log('Variable has NOT been defined'); // This would be logged
+// }
+
+// height = 23;
+
+// if (height == '23') {
+// 	console.log('The == operator does type coercion!') // This will print!
+// }
+
+
+/**************************************
+ * Functions
+**************************************/
+
+// function calculateAge(birthYear) {
+//     return 2020 - birthYear;
+// }
+
+// var ageNader = calculateAge(1994);
+// var age2 = calculateAge(1987);
+// var age3 = calculateAge(1967);
+// console.log(ageNader, age2, age3);
+
+// function yearsUntilRetirement(year, firstName) {
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
+//     if (retirement > 0) {
+//         console.log(firstName + ' retires in ' + retirement + ' years');
+//     } else {
+//         console.log(firstName + ' is already retired');
+//     }
+// }
+
+// yearsUntilRetirement(1994, 'Nader');
+
+/**************************************
+ * Function Statements and Expressions
+**************************************/
+
+// Function Expression
+// var whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids';
+//         case 'driver':
+//             return firstName + ' drives cars';
+//         case 'designer':
+//             return firstName + ' designs websites';
+//         default:
+//             return firstName + ' does something else';
+//     }
+// }
+
+// console.log(whatDoYouDo('teacher', 'John'));
+
+
+/**************************************
+ * Arrays
+**************************************/
