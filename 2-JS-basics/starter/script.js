@@ -1,6 +1,6 @@
 /*************************
-* Variables and Data Types
-**************************/
+ * Variables and Data Types
+ **************************/
 
 // var firstName = 'Nader';
 // console.log(firstName);
@@ -19,7 +19,7 @@
 
 /**************************************
  * Variable mutation and type coercion
-*************************************/
+ *************************************/
 
 // var firstName = 'Nader';
 // var age = 25;
@@ -44,7 +44,7 @@
 
 /**************************************
  * Basic Operators
-*************************************/
+ *************************************/
 
 // var year, yearBorn, yearOther;
 // year = 2020
@@ -74,7 +74,7 @@
 
 /**************************************
  * Operator Precedence
-*************************************/
+ *************************************/
 
 var now = 2020;
 var yearNader = 1994;
@@ -94,7 +94,6 @@ var average = (ageFoo + ageBar) / 2;
 var x, y;
 // x ends up NOT being 'undefined' because the `=` operator executes from right-to-left
 x = y = (3 + 5) * 4 - 6;
-
 
 // More operators
 x *= 2;
