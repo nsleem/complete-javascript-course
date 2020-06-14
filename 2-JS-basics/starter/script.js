@@ -287,3 +287,59 @@
 
 // console.log(john.indexOf(1990));
 // console.log(john.indexOf('not_in_array')); // Returns -1 if value not in array
+
+
+/**************************************
+ * Objects and Properties
+**************************************/
+
+// var nader = {
+//     firstName: 'Nader', // Each entry of the Object is called a Property
+//     lastName: 'Sleem',
+//     birthYear: 1994,
+//     family: ['Hala', 'Nadine'],
+//     job: 'unemployed',
+//     isMarried: false
+// };
+// console.log(nader);
+// // Access properties using dot notion
+// console.log(nader.firstName);
+// // We can also access properties using []
+// var x = 'birthYear';
+// console.log(nader[x]);
+
+// // Mutating Objects
+// nader.job = 'engineer';
+// nader['isMarried'] = true;
+
+// console.log(nader)
+
+// // New object syntax
+// var foo = new Object();
+// foo.name = 'Foo';
+// foo.birthYear = '2020';
+// foo['bar'] = 'baz';
+// console.log(foo);
+
+/**************************************
+ * Objects and Methods
+**************************************/
+
+// var nader = {
+//     firstName: 'Nader',
+//     lastName: 'Sleem',
+//     birthYear: 1994,
+//     family: ['Hala', 'Nadine'],
+//     job: 'unemployed',
+//     isMarried: false,
+//     calcAge: function() {
+//         this.age = 2020 - this.birthYear; // `This` keyword refers to the current object
+//     } // We can create a new property and assign a value to it within the method.
+// };
+// nader.calcAge();
+// console.log(nader);
+
+
+/**************************************
+ * Loops and Iteration
+**************************************/
