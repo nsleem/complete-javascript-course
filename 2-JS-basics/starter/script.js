@@ -254,3 +254,36 @@
 /**************************************
  * Arrays
 **************************************/
+
+// var names = ['Nader', 'Bob', 'Foo', 'Bar'];
+// var years = new Array(1999, 1985, 1977);
+
+// console.log(names[0]);
+// console.log(names);
+// console.log(names.length);
+
+// // Mutate Array Data
+// names[1] = 'Baz';
+
+// // Notice we indexed out of bounds, but the entry got added.
+// // And the "skipped" entries have a value of `empty`
+// names[5] = 'Fish';
+// names[names.length] = 'Blah';
+// console.log(names);
+
+// // Different data types
+// var john = ['John', 'Smith', 1990, 'teacher', false];
+
+// // Array Methods
+// john.push('blue');
+// john.unshift('Mr');
+// console.log(john);
+// john.pop();
+// console.log(john);
+// john.pop();
+// console.log(john);
+// john.shift();
+// console.log(john);
+
+// console.log(john.indexOf(1990));
+// console.log(john.indexOf('not_in_array')); // Returns -1 if value not in array
