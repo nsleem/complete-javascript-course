@@ -343,3 +343,37 @@
 /**************************************
  * Loops and Iteration
 **************************************/
+
+// for(var i = 0; i < 10; i++){
+//     console.log(i);
+// }
+
+// var names = ['Nader', 'Bob', 'Foo', 'Bar'];
+
+// for (var i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+// }
+
+// var i = 0;
+// while (i < names.length) {
+//     console.log(i);
+//     i++;
+// }
+
+// continue and break statements
+// var names = ['Nader', 'Bob', 123, 'Foo', 'Bar'];
+
+// for (var i = 0; i < names.length; i++) {
+//     if (typeof names[i] !== 'string') continue;
+//     console.log(names[i]);
+// }
+
+// for (var i = 0; i < names.length; i++) {
+//     if (typeof names[i] !== 'string') break;
+//     console.log(names[i]);
+// }
+
+// // Looping backwards
+// for (var i = names.length - 1; i >= 0; i--) {
+//     console.log(names[i]);
+// }
