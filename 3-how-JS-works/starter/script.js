@@ -103,3 +103,51 @@ function third() {
 
 ///////////////////////////////////////
 // Lecture: The this keyword
+
+console.log(this); // Window Object
+calcAge(1989);
+
+function calcAge(year) {
+    console.log(2020 - year);
+    console.log(this); // Window Object, because this function is attached to
+                       // the Global Object
+}
+
+var foo = {
+    name: 'bob',
+    yearOfBirth: 1999,
+    calculateAge: function(year) {
+        console.log(this); // Logs the `foo` object.
+
+        function inner() {
+            console.log(this); // Something strange happens here: the `this`
+            // variable in this case is referring to the `global Window object`
+            // even though we are within the scope of a method of an object.
+            // But this actually makese sense: This is a regular function call,
+            // not a call to a method that is attached to an object! `inner()`
+            // is not a property of the `foo` object that we created, technically.
+            // Even though the function is inside a method, it is still a regular
+            // function.
+        }
+        inner();
+    }
+}
+foo.calculateAge(2020);
+
+
+var bar = {
+    name: "baz",
+    yearOfBirth: 1994,
+
+}
+
+bar.calculateAge = foo.calculateAge; // Method Borrowing. Instead of rewriting the
+// function, we can just assign foo's definition of it to bar's.
+
+bar.calculateAge(); // When `this` gets printed for `bar`, even though we assigned
+// it the function as it was defined in `foo`, it will still print the `bar` object.
+
+// This is because the `this` value does not get assigned until the object calls
+// the method. Without this caveat, the function call would print the `foo` object
+// even though it is being invoked from the `bar` object, which would defeat the
+// purpose of the `this` keyword.
