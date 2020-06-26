@@ -165,5 +165,71 @@ var jane = Object.create(personProto,{
 // Closures
 
 
+// function retirement(retirementAge) {
+//     var a = ' years left until retirement.'
+//     return function(yearOfBirth) {
+//         var age = 2020 - yearOfBirth;
+//         console.log((retirementAge - age) + a);
+//     }
+// }
+
+// var retirementUS = retirement(66);
+// var retirementGermany = retirement(65);
+// var retirementIceland = retirement(67);
+// retirementUS(1994);
+// retirementGermany(1994);
+// retirementIceland(1994);
 
 
+
+
+/////////////////////////////////////
+// Bind, Call, Apply
+
+// var john = {
+//     name: 'John',
+//     age: 25,
+//     job: 'teacher',
+//     presentation: function(style, timeOfDay){
+//         if (style === 'formal') {
+//             console.log('Good ' + timeOfDay + ', Ladies and Gentlement. I\'m ' + this.name + ", I\'m " + this.age + " years old.");
+//         } else if (style === 'friendly') {
+//             console.log("Hey! What\'s up? I\'m " + this.name + ", I\'m " + this.age + " years old. Have a nice " + timeOfDay + ".");
+//         }
+//     }
+// }
+
+//john.presentation('formal', 'morning');
+
+
+// var emily = {
+//     name: "Emily",
+//     age: 35,
+//     job: "designer"
+// };
+
+
+//john.presentation.call(emily, 'friendly', 'afternoon');
+
+//john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+// var johnFriendly = john.presentation.bind(john, 'friendly');
+// johnFriendly('morning');
+
+// var emilyFormal = john.presentation.bind(emily, 'formal');
+// emilyFormal('afternoon');
+
+
+// function arrayCalc(arr, fn) {
+//     var arrRes = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         arrRes.push(fn(arr[i]));
+//     }
+//     return arrRes;
+// }
+
+// function isFullAge(limit, age) {
+//     return age >= limit;
+// }
+
+// var fullAgeJapan = arrayCalc([25,22,19,30], isFullAge.bind(this, 20));
