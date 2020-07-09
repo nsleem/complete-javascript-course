@@ -80,21 +80,35 @@
         };
 
         // Callback's argument is just the result of the Fulfilled Promise
-        getIDs
-        .then(IDs => {
-            console.log(IDs);
-            return getRecipe(IDs[2]);
-        })
-        .then(recipe => {
-            console.log(recipe);
-            return getRelated('Bob');
-        })
-        .then(recipe => {
-            console.log(recipe);
-        })
-        .catch(error => {
-            console.log(error);
-        })
+        // getIDs
+        // .then(IDs => {
+        //     console.log(IDs);
+        //     return getRecipe(IDs[2]);
+        // })
+        // .then(recipe => {
+        //     console.log(recipe);
+        //     return getRelated('Bob');
+        // })
+        // .then(recipe => {
+        //     console.log(recipe);
+        // })
+        // .catch(error => {
+        //     console.log(error);
+        // });
+
+        // Async/Await
+
+        async function getRecipiesAW() {
+            const IDs = await getIDs;
+            console.log(IDs)
+            const recipe = await getRecipe(IDs[2]);
+            console.log(recipe)
+            const related = await getRelated('Bob');
+            console.log(related)
+
+            return recipe;
+        }
+        getRecipiesAW().then(rec => console.log(`${rec} is the best.`));
 
     </script>
 </body>
