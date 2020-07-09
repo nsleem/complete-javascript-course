@@ -98,17 +98,53 @@
 
         // Async/Await
 
-        async function getRecipiesAW() {
-            const IDs = await getIDs;
-            console.log(IDs)
-            const recipe = await getRecipe(IDs[2]);
-            console.log(recipe)
-            const related = await getRelated('Bob');
-            console.log(related)
+        // async function getRecipiesAW() {
+        //     const IDs = await getIDs;
+        //     console.log(IDs)
+        //     const recipe = await getRecipe(IDs[2]);
+        //     console.log(recipe)
+        //     const related = await getRelated('Bob');
+        //     console.log(related)
 
-            return recipe;
+        //     return recipe;
+        // }
+        // getRecipiesAW().then(rec => console.log(`${rec} is the best.`));
+
+
+        // Making AJAX Calls (using Fetch and Promises)
+
+        function getWeather(woeid) {
+            const url = `https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`;
+            fetch(url)
+            .then(result => {
+                // To convert the Response object into JSON, we need to call it's async .json() method.
+                // This method returns a Promise, so we need to use a chain to process that Promise as well.
+                return result.json();
+            })
+            .then(data => {
+                console.log(data);
+                const today = data.consolidated_weather[0];
+            })
+            .catch(error => {
+                console.log(error);
+            });
         }
-        getRecipiesAW().then(rec => console.log(`${rec} is the best.`));
+
+        // Making AJAX Calls (using Fetch and Async/Await)
+
+        async function getWeatherAW(woeid) {
+            const url = `https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`;
+            try { // Handle Errors in Async functions using try/catch
+                const result = await fetch(url);
+                const data = await result.json();
+                const today = data.consolidated_weather[0];
+                return data;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        let dataLondon;
+        getWeatherAW(44418).then(data => dataLondon = data);
 
     </script>
 </body>
